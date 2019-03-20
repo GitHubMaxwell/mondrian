@@ -1,0 +1,10 @@
+/* CSS GRID / prefixes */
+
+@mixin gridbox() {
+  display: -ms-grid;
+  display: grid;
+}
+
+.grid-container {
+  @include gridbox();
+}
