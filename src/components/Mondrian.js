@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import MondrianItem from './MondrianItem';
 
 export default class Mondrian extends Component {
@@ -11,11 +11,14 @@ export default class Mondrian extends Component {
 
   render() {
     return (
-      <ul className="mondrian-container">
-        {this.state.items.map(ele => (
-          <MondrianItem key={ele} />
-        ))}
-      </ul>
+      <Fragment>
+        <h2>Resize your browser window!</h2>
+        <ul className="mondrian-container">
+          {this.state.items.map(ele => (
+            <MondrianItem key={ele} />
+          ))}
+        </ul>
+      </Fragment>
     );
   }
 }
